@@ -23,7 +23,7 @@ class I586ElfGcc < Formula
     mkdir 'build' do
       system '../configure', '--disable-nls', '--target=i586-elf',
                              "--prefix=#{prefix}",
-                             "--enable-languages=c",
+                             "--enable-languages=c,c++",
                              "--without-headers"
       system 'make all-gcc'
       system 'make install-gcc'
