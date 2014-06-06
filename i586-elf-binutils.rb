@@ -13,9 +13,12 @@ class I586ElfBinutils < Formula
     ENV['CPP'] = '/usr/local/bin/cpp-4.9'
     ENV['LD'] = '/usr/local/bin/gcc-4.9'
     
+    ENV['PREFIX'] = '$HOME/opt/cross'
+    ENV['TARGET'] = 'i586-elf'
+    ENV['PATH'] = '$$PREFIX/bin:$PATH'"
+    
     mkdir 'build' do
-      system '../configure', '--disable-nls', '--target=i586-elf',
-                             "--prefix=#{prefix}"
+      system '../configure', '--target="TARGET"', '--prefix=$PREFIX', '--disable-nls', '--disable-werror'
       system 'make all'
       system 'make install'
       FileUtils.mv lib, libexec
