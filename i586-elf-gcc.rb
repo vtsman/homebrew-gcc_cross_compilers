@@ -10,6 +10,7 @@ class I586ElfGcc < Formula
   depends_on 'libmpc'
   depends_on 'mpfr'
   depends_on 'i586-elf-binutils'
+  depends_on 'mpc'
 
   def install
     binutils = Formula.factory 'i586-elf-binutils'
