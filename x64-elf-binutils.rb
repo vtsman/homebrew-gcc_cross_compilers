@@ -15,7 +15,6 @@ class X64ElfBinutils < Formula
 
     mkdir 'build' do
       system '../configure', '--disable-nls', '--target=x86_64-elf',
-                             '--enable-gold=yes',
                              "--prefix=#{prefix}"
       system 'make all'
       system 'make install'
