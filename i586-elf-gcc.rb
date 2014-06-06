@@ -14,10 +14,10 @@ class I586ElfGcc < Formula
   def install
     binutils = Formula.factory 'i586-elf-binutils'
 
-    ENV['CC'] = '/usr/local/bin/gcc-4.2'
-    ENV['CXX'] = '/usr/local/bin/g++-4.2'
-    ENV['CPP'] = '/usr/local/bin/cpp-4.2'
-    ENV['LD'] = '/usr/local/bin/gcc-4.2'
+    ENV['CC'] = 'gcc-4.9'
+    ENV['CXX'] = 'g++-4.9'
+    ENV['CPP'] = 'cpp-4.9'
+    ENV['LD'] = 'gcc-4.9'
     ENV['PATH'] += ":#{binutils.prefix/"bin"}"
 
     mkdir 'build' do
