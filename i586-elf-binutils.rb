@@ -8,17 +8,15 @@ class I586ElfBinutils < Formula
   depends_on 'apple-gcc42' => :build
 
   def install
-    ENV['CC'] = '/usr/local/bin/gcc-4.9'
-    ENV['CXX'] = '/usr/local/bin/g++-4.9'
-    ENV['CPP'] = '/usr/local/bin/cpp-4.9'
-    ENV['LD'] = '/usr/local/bin/gcc-4.9'
-    
-    ENV['PREFIX'] = '$HOME/opt/cross'
-    ENV['TARGET'] = 'i586-elf'
-    ENV['PATH'] = '$$PREFIX/bin:$PATH'"
-    
+    ENV['CC'] = '/usr/local/bin/gcc-4.2'
+    ENV['CXX'] = '/usr/local/bin/g++-4.2'
+    ENV['CPP'] = '/usr/local/bin/cpp-4.2'
+    ENV['LD'] = '/usr/local/bin/gcc-4.2'
+
     mkdir 'build' do
-      system '../configure', '--target="TARGET"', '--prefix=$PREFIX', '--disable-nls', '--disable-werror'
+      system '../configure', '--disable-nls', '--target=i586-elf',
+                             '--enable-gold=yes',
+                             "--prefix=#{prefix}"
       system 'make all'
       system 'make install'
       FileUtils.mv lib, libexec
