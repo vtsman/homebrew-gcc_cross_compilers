@@ -26,6 +26,9 @@ class I586ElfGcc < Formula
                              "--prefix=#{prefix}",
                              "--enable-languages=c,c++",
                              "--without-headers"
+                             "--with-mpc=/usr/local/Cellar/libmpc/1.0.2"
+                             "--with-gmp=/usr/local/Cellar/gmp/6.0.0a"
+                             "--with-mpfr=/usr/local/Cellar/mpfr/3.1.2-p8" 
       system 'make all-gcc'
       system 'make install-gcc'
       FileUtils.ln_sf binutils.prefix/"i586-elf", prefix/"i586-elf"
