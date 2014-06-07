@@ -25,9 +25,9 @@ class I586ElfGcc < Formula
       system '../configure', '--disable-nls', '--target=i586-elf',
                              "--prefix=#{prefix}",
                              "--enable-languages=c,c++",
-                             "--without-headers"
-                             "--with-mpc=/usr/local/Cellar/libmpc/1.0.2"
-                             "--with-gmp=/usr/local/Cellar/gmp/6.0.0a"
+                             "--without-headers",
+                             "--with-mpc=/usr/local/Cellar/libmpc/1.0.2",
+                             "--with-gmp=/usr/local/Cellar/gmp/6.0.0a",
                              "--with-mpfr=/usr/local/Cellar/mpfr/3.1.2-p8" 
       system 'make all-gcc'
       system 'make install-gcc'
