@@ -3,7 +3,7 @@ require 'formula'
 class ArmElfBinutils < Formula
   homepage 'http://gcc.gnu.org'
   url 'http://ftp.gnu.org/gnu/binutils/binutils-2.27.tar.gz'
-  sha1 '470c388c97ac8d216de33fa397d7be9f96c3fe04'
+  sha1 'a99bd0aee0d574378e86604db44593d797fca36f'
 
   depends_on 'apple-gcc42' => :build
 
