@@ -4,7 +4,7 @@ class ArmElfGcc < Formula
   homepage 'http://gcc.gnu.org'
   url 'http://ftpmirror.gnu.org/gcc/gcc-4.9.0/gcc-4.9.0.tar.bz2'
   mirror 'http://ftp.gnu.org/gnu/gcc/gcc-4.9.0/gcc-4.9.0.tar.bz2'
-  sha1 'b4ee6e9bdebc65223f95067d0cc1a634b59dad72'
+  sha1 'b15ccbd8091851cbbc389813d02528d035613c9c'
 
   depends_on 'gmp'
   depends_on 'libmpc'
